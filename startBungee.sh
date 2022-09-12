@@ -1,25 +1,13 @@
 
 #! /bin/bash
 
-### BEGIN INIT INFO
-# Provides:   minecraft
-# Required-Start: $local_fs $remote_fs
-# Required-Stop:  $local_fs $remote_fs
-# Should-Start:   $network
-# Should-Stop:    $network
-# Default-Start:  2 3 4 5
-# Default-Stop:   0 1 6
-# Short-Description:    BunGeecord
-# Description:    Starts the BunGeecord server
-### END INIT INFO
-
 SERVER='BungeeCord.jar'
 SCREENAME="bungee01"
-USER='root'
 MAX_RAM="1024M"
 MIN_RAM="1024M"
-HISTORY=32
 HOME="/home/network/mainServer/bungee/bungee01"
+USER='root'
+HISTORY=32
 INVOCATION="screen -S ${SCREENAME} java -Xmx${MAX_RAM} -Xms${MIN_RAM} -jar ${SERVER}"
 ME=`whoami`
 
@@ -81,8 +69,8 @@ stop() {
 }
 
 view() {
-  echo "Wichtig die Konsole mit Strg+A+D verlassen sonst stürzt der Server ab"
-  echo "Konsole startet in 3s"
+  echo "IMPORTANT: leave console with CTRL + A + D, otherwise the server will crash"
+  echo "console opens in 3 seconds"
   sleep 3
   screen -r ${SCREENAME}
 }
