@@ -16,11 +16,11 @@
 SERVER='BungeeCord.jar'
 SCREENAME="bungee01"
 USER='root'
-HEAP_MAX=1024
-HEAP_MIN=1024
+MAX_RAM="1024M"
+MIN_RAM="1024M"
 HISTORY=32
 HOME="/home/network/mainServer/bungee/bungee01"
-INVOCATION="screen -S ${SCREENAME} java -Xmx${HEAP_MAX}M -Xms${HEAP_MIN}M -jar ${SERVER}"
+INVOCATION="screen -S ${SCREENAME} java -Xmx${MAX_RAM} -Xms${MIN_RAM} -jar ${SERVER}"
 ME=`whoami`
 
 as_user() {
@@ -81,7 +81,7 @@ stop() {
 }
 
 view() {
-  echo "Wichtig die Konsole mit Strg+A+D verlassen sonst stürzt der Server ab"
+  echo "Wichtig die Konsole mit Strg+A+D verlassen sonst stÃ¼rzt der Server ab"
   echo "Konsole startet in 3s"
   sleep 3
   screen -r ${SCREENAME}
