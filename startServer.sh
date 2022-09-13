@@ -1,9 +1,9 @@
 #!/bin/sh
 
-HOME="/home/network/subServer/testworld"
-SCREENAME='testworld'
-MAX_RAM="8G"
-MIN_RAM="4G"
+HOME="/home/network/lobby"
+SCREENAME='lobby'
+MAX_RAM="2G"
+MIN_RAM="1G"
 SERVER="spigot-1.19.2.jar"
 
 
