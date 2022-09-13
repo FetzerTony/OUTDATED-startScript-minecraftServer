@@ -25,3 +25,14 @@ Starting scripts for a Spigot / Bukkit / ... Server or a BungeeCord Server.
 3. Change **"HOME"** to the directory, where the spigot.jar file is.
 4. Set **"MAX_RAM"** to the maximum amount of RAM you will give the server and **"MIN_RAM"** to the minimum amount.
 5. That's it, for more settings you can also change the other parameters.
+
+## starting commands
+1. Go to the folder where the startup file is located. ```cd /<directory>```
+
+### Commands
+- You can select between this options: ***start, stop, restart, view***
+
+  - **start**: Starts the server. ```./startServer.sh start``` or ```./startBungee.sh start```
+  - **stop**: Stops the server. ```./startServer.sh stop``` or ```./startBungee.sh stop```
+  - **restart**: Restarts the server. ```./startServer.sh restart``` or ```./startBungee.sh restart```
+  - **view**: Opens the console. ```./startServer.sh view``` or ```./startBungee.sh view```
