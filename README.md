@@ -17,14 +17,16 @@ Starting scripts for a Spigot / Bukkit / ... Server or a BungeeCord Server.
 2. Open the file and change **"SERVER"** to your BungeeCord.jar file name if needed. Change **"SCREENNAME"** to the name you want.
 3. Change **"HOME"** to the directory, where the BungeeCord.jar file is.
 4. Set **"HEAP_MAX"** to the maximum amount of RAM you will give the server and **"HEAP_MIN"** to the minimum amount.
-5. That's it, for more settings you can also change the other parameters.
+5. Type `chmod 777 startBungee.sh` in the server console.
+6. That's it, for more settings you can also change the other parameters.
 
 ## :hammer_and_wrench: Spigot / Bukkit / ... file installation
 1. Put the **startServer.sh** file into your Minecraft server folder. (Rename it if you want to)
 2. Open the file and change **"SERVER"** to your spigot.jar file name if needed. Change **"SCREENNAME"** to the name you want.
 3. Change **"HOME"** to the directory, where the spigot.jar file is.
 4. Set **"MAX_RAM"** to the maximum amount of RAM you will give the server and **"MIN_RAM"** to the minimum amount.
-5. That's it, for more settings you can also change the other parameters.
+5. Type `chmod 777 startServer.sh` in the server console.
+6. That's it, for more settings you can also change the other parameters.
 
 ## :star: starting commands
 1. Go to the folder where the startup file is located. ```cd /<directory>```
