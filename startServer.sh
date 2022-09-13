@@ -12,30 +12,30 @@ case "$1" in
     if ! screen -list | grep -q ${SCREENAME} ; then
       cd ${HOME}
       screen -d -m -S ${SCREENAME} java -Xmx${MAX_RAM} -Xms${MIN_RAM} -XX:+UseG1GC -jar ${SERVER} nogui
-      echo "Server wird gestartet, screen -r ${SCREENAME} oder ./start.sh view eingeben um die Serverkonsole anzuzeigen."
+      echo "Starting the server, type \"screen -r ${SCREENAME}\" or \"./start.sh view\" to display the server console."
     else
-      echo "Der Server ist schon gestartet."
+      echo "The server is already started."
     fi
     ;;
   stop)
     screen -S ${SCREENAME} -X stuff "save-all\n"
-    echo "Der Save-All-Befehl wurde an den Server gesendet."
+    echo "The save-all command was sent to the server."
     screen -S ${SCREENAME} -X stuff "stop\n"
-    echo "Der Stop-Befehl wurde an den Server gesendet."
+    echo "The stop command was sent to the server."
     ;;
   restart)
-    screen -S ${SCREENAME} -X stuff "say Die lobby startet neu!\n"
+    screen -S ${SCREENAME} -X stuff "say The server restarts!\n"
     screen -S ${SCREENAME} -X stuff "save-all\n"
     sleep 10
     screen -S ${SCREENAME} -X stuff "stop\n"
     sleep 10
     cd ${HOME}
     screen -d -m -S ${SCREENAME} java -Xmx${MAX_RAM} -Xms${MIN_RAM} -XX:+UseG1GC -jar ${SERVER} nogui
-    echo Server wurde neugestartet
+    echo "Server has restarted"
     ;; 
   view)
-    echo "Wichtig die Konsole mit Strg+A+D verlassen sonst stürzt der Server ab"
-    echo "Konsole startet in 3s"
+    echo "IMPORTANT: leave console with CTRL + A + D, otherwise the server will crash"
+    echo "console opens in 3 seconds"
     sleep 3
     screen -r ${SCREENAME}
     ;;
@@ -44,7 +44,7 @@ case "$1" in
     echo Screen wurde gekillt
     ;;
   *)
-    echo "Verwende: ${0} {start|stop|restart|view|kill}"
+    echo "Usage: ${0} {start|stop|restart|view|kill}"
 exit 2
 esac
 exit 0
