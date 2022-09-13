@@ -2,10 +2,10 @@
 #! /bin/bash
 
 SERVER='BungeeCord.jar'
-SCREENAME="bungee01"
+SCREENAME="bungee"
 MAX_RAM="1024M"
 MIN_RAM="1024M"
-HOME="/home/network/mainServer/bungee/bungee01"
+HOME="/home/network/bungee"
 USER='root'
 HISTORY=32
 INVOCATION="screen -S ${SCREENAME} java -Xmx${MAX_RAM} -Xms${MIN_RAM} -jar ${SERVER}"
