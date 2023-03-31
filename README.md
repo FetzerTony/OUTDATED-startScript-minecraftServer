@@ -1,3 +1,5 @@
+## Look [here](https://github.com/FetzerTony/startupScript-Minecraft-V2) for the new startup script!
+
 # Starting Scripts
 Starting scripts for a Spigot / Bukkit / ... Server or a BungeeCord Server.
 
